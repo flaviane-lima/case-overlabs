@@ -1,0 +1,24 @@
+{
+  "name": "case-overlabs",
+  "version": "1.0.0",
+  "description": "Desafio técnico Overlabs - API  de transformação de dados de filmes com Node.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/flaviane-lima/case-overlabs.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/flaviane-lima/case-overlabs/issues"
+  },
+  "homepage": "https://github.com/flaviane-lima/case-overlabs#readme",
+  "dependencies": {
+    "express": "^5.3.0"
+  }
+}
