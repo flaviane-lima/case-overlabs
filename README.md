@@ -45,4 +45,8 @@ Durante o desenvolvimento, utilizei `fetch()` para consumir a API externa, `map(
 
 ## Documentação
 
-Consulte a [documentação completa](docs/documentacao.md) para conhecer as etapas de desenvolvimento e os testes realizados.
+Documentação
+
+## Documentação
+
+Consulte a [documentação completa](doc/documentacao.md) para conhecer as etapas de desenvolvimento e os testes realizados.
