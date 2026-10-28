@@ -49,6 +49,11 @@ app.get('/filmes', async (req, res) => {
       item.premios[0]
      );
 
+     //para achar no array a condição que ele solicita
+     const notaIMDb = item.ratings.find((rating) => {
+      return rating.fonte === "IMDb";
+     });
+
 
     return {
        titulo: item.titulo,
@@ -56,6 +61,7 @@ app.get('/filmes', async (req, res) => {
        diretor: item.diretor,
        genero: item.genero,
        duracaoSegundos: duracaoEmSegundos,
+       notaIMDb: notaIMDb.valor.toString(),
        lucro: lucro,
        maiorPremiacao: maiorPremiacao.nome
     };
