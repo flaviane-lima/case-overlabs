@@ -49,4 +49,4 @@ Documentação
 
 ## Documentação
 
-Consulte a [documentação completa](doc./documentacao.md) para conhecer as etapas de desenvolvimento e os testes realizados.
+Consulte a [documentação completa](doc/documentacao.md) para conhecer as etapas de desenvolvimento e os testes realizados.
