@@ -25,6 +25,7 @@ console.log(converterValor("$2 bilhões"));
 
 //rota dos filmes
 app.get('/filmes', async (req, res) => {
+  
   const resposta = await fetch('https://tv5hn2gvyijpl76yxlmsy66jwa0nlmxn.lambda-url.us-east-1.on.aws/')
 
   const dados = await resposta.json();
@@ -32,10 +33,21 @@ app.get('/filmes', async (req, res) => {
   const filmesTransformados = dados.filmes.map(function (item) {
     //calculo do lucro
     const lucro = converterValor(item.bilheteria) - converterValor(item.orcamento);
-  
 
     //transformando para segundos
     const duracaoEmSegundos = item.duracao * 60;
+
+     //encontrar a maior premiação usando item.premios.reduce()
+     const maiorPremiacao = item.premios.reduce(
+      (acumulador, atual) => {
+        if(acumulador.relevancia > atual.relevancia) {
+          return acumulador
+        } else {
+          return atual
+        }
+      }, 
+      item.premios[0]
+     );
 
 
     return {
@@ -44,7 +56,8 @@ app.get('/filmes', async (req, res) => {
        diretor: item.diretor,
        genero: item.genero,
        duracaoSegundos: duracaoEmSegundos,
-       lucro: lucro
+       lucro: lucro,
+       maiorPremiacao: maiorPremiacao.nome
     };
   });
 
