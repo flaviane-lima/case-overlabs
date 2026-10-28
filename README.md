@@ -45,6 +45,4 @@ Durante o desenvolvimento, utilizei `fetch()` para consumir a API externa, `map(
 
 ## Documentação
 
-A documentação completa descreve as etapas de configuração do projeto, implementação das rotas, transformação dos dados e testes realizados.
-
-Consulte o arquivo de documentação disponível no repositório para conhecer o processo de desenvolvimento em detalhes.
+Consulte a [documentação completa](docs/documentacao.md) para conhecer as etapas de desenvolvimento e os testes realizados.
