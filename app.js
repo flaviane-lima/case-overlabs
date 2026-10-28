@@ -32,13 +32,18 @@ app.get('/filmes', async (req, res) => {
   const filmesTransformados = dados.filmes.map(function (item) {
     //calculo do lucro
     const lucro = converterValor(item.bilheteria) - converterValor(item.orcamento);
-    console.log(item);
+  
+
+    //transformando para segundos
+    const duracaoEmSegundos = item.duracao * 60;
+
 
     return {
        titulo: item.titulo,
        ano: item.ano,
        diretor: item.diretor,
        genero: item.genero,
+       duracaoSegundos: duracaoEmSegundos,
        lucro: lucro
     };
   });
