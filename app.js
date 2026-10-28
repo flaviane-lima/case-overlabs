@@ -22,6 +22,15 @@ function converterValor(valor) {
 console.log(converterValor("$6 milhões"));
 console.log(converterValor("$2 bilhões"));
 
+//formatando o lucro voltando para origem
+function formatarValor(valor) {
+  if (valor >= 1000000000) {
+    return `$${(valor / 1000000000).toFixed(1)} bilhões`;
+  } else {
+    return  `$${(valor / 1000000).toFixed(1)} milhões`;
+  }
+}
+
 
 //rota dos filmes
 app.get('/filmes', async (req, res) => {
@@ -77,7 +86,7 @@ app.get('/filmes', async (req, res) => {
       genero: item.genero,
       duracaoSegundos: duracaoEmSegundos,
       notaIMDb: notaIMDb.valor.toString(),
-      lucro: lucro,
+      lucro: formatarValor(lucro),
       maiorPremiacao: maiorPremiacao.nome,
       sinopse: sinopse.texto
     };
