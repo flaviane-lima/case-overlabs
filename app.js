@@ -18,9 +18,6 @@ function converterValor(valor) {
     return valorFinal * 1000000000
   }
 }
-//testando no terminal se a função estava saindo os valores espeardo no calculo
-console.log(converterValor("$6 milhões"));
-console.log(converterValor("$2 bilhões"));
 
 //formatando o lucro voltando para origem
 function formatarValor(valor) {
@@ -78,7 +75,6 @@ app.get('/filmes', async (req, res) => {
       sinopse = item.sinopse[0];
     }
 
-    console.log("Sinopse escolhida:", sinopse);
     return {
       titulo: item.titulo,
       ano: item.ano,
